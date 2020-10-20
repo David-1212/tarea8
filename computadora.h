@@ -1,5 +1,6 @@
 #ifndef COMPUTADORA_H
 #define COMPUTADORA_H
+#include <iomanip>
 #include<iostream>
 
 using namespace std;
@@ -26,6 +27,36 @@ class Computadora {
 
     void setRom(int v);
     int getRom();
+
+    friend ostream& operator<<(ostream &out, const Computadora &p)
+    {
+      out<<left;
+      out <<setw(15)<<p.nombre;
+      out <<setw(16)<<p.sistema;
+      out <<setw(7)<<p.ram;
+      out <<setw(7)<<p.rom;
+      out <<endl;
+      return out;
+    }
+    friend istream& operator>>(istream &in, Computadora &p)
+    {
+      //string temp;
+      //float ram;
+     // int rom;
+    
+      cout <<"Nombre: ";
+      getline(cin, p.nombre);
+      cout <<"sistema: ";
+      getline(cin, p.sistema);
+      cout <<"Ram: ";
+      cin>>p.ram;
+      cout <<"Rom: ";
+      cin>>p.rom;
+
+
+
+      return in;
+    }
   };
 
 #endif
