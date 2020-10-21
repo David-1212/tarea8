@@ -1,0 +1,5 @@
+Nombre         Sistema         Ram    Rom    
+DAVIDPC        Windows 10      16     10     
+VARGASPC       Windows 7       20     30     
+david          vargas          12     13     
+vargas         linux           13     12     
